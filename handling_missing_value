@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import pandas as pd
+import numpy as np
+import statistics as state
+
+
+# In[3]:
+
+
+df=pd.read_csv("Lab-1.csv")
+df.head(13)
+
+
+# In[4]:
+
+
+df.info()
+
+
+# In[5]:
+
+
+df.isnull().sum()
+
+
+# In[6]:
+
+
+x = df.age
+
+
+# In[7]:
+
+
+xmean = x.mean()
+
+
+# In[8]:
+
+
+xmean
+
+
+# In[9]:
+
+
+state.median(x)
+
+
+# In[10]:
+
+
+state.mode(x)
+
+
+# In[11]:
+
+
+df['age'].fillna(df['age'].median(), inplace = True)
+
+
+# In[12]:
+
+
+df.isnull().sum()
+
+
+# In[13]:
+
+
+df.head(13)
+
+
+# In[ ]:
+
+
+
+
